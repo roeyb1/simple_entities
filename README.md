@@ -3,6 +3,8 @@
 A very simple entity system for the Jai programming language.
 
 
+Note: the metaprogram plugin included here currently does _not_ work due to difficulty in passing the type definitions across the program module boundary and into the `simple_entities` module. If you wish to use this in your own projects, just rip out the message loop from the metaprogram plugin and insert into your own metaprogram mesage loop.
+
 # Background
 
 While iterating on designs for the entity system for the game, I experimented with an ECS framework. I definitely enjoy the performance aspects, separate of data/logic, ease of serializing game state, network synchronization, (many more benefits). However, it became apparent that (outside of the rendering code) the ECS soon became the largest part of the codebase. The complexity of managing the ECS vastly out-weighed the benefits of having such a dynamic system.
